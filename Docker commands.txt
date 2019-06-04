@@ -1,0 +1,69 @@
+Docker ps -> lista os containers ativos
+
+Docker ps -a -> lista todos os containers 
+
+docker rum -it hello_world -> atrela o terminal atual ao terminal do container
+
+ctrl + c -> encerra container
+
+docker start @id -> starta o container
+docker stop @id -> para o container
+docker stop -t @id -> -t define o tempo que vai esperar para para o container
+
+docker start @id -i -> starta o container e vincula o cmd
+
+docker start --help -> ajuda de comandos
+
+docker rm @id -> remove container
+
+docker container prune -> remove todos os cotainers parados
+
+docker images -> mostra as imagens
+
+docker rmi @name -> remove imagens
+
+docker run dockersamples/static-site -> baixa uma imagem com um site estatico
+
+docker -d run containerName -> -d vai rodar o docker sem travar o terminal
+
+docker -d -P run containerName -> -P vai fazer o docker atribuir portas
+
+docker -d -p 12345:80 run containerName -> -p me permite escolher a porta que estou atribuindo ao container
+
+docker -e AUTHOR="Gustavo M. S."run containerName -> -e permite adicionar variaveis de ambiente
+
+docker port @id -> mostra o mapeamento das portas do container com a marquina real
+
+docker-machine ip -> mostra o ip da sua maquina virtual (CASO UTILIZE O TOOLBOX)
+
+docker run --name nome-do-container containerName -> --name da um nome ao container
+
+docker ps -q -> lista apenas os ids dos containers
+
+docker stop $(docker ps -q) -> para todos os containers que estão rodando
+
+$() -> roda o comando que estiver dentro do parenteses e retorna o valor
+
+docker run -v "/var/www" -> cria um volume na pasta especificada dentro do container e em qualquer pasta da sua maquina
+
+docker run -v "c:\Users\maquina\real:/var/www" -> mapeia a pasta do volume criado no container com uma pasta da maquina real e vice versa
+
+docker inspect @id -> fornece informações sobre o container
+
+docker run -w "/var/www" containerName npm start -> -w = "working directory" -> qual diretorio é para iniciar o container
+
+docker-machine restart -> reinicia a maquina virtual docker
+
+
+
+________________________________________________________________________________
+Caso ocorra o erro:
+Error response from daemon: invalid mode: /var/www
+ao rodar o comando por exemplo:
+ docker run -p 8080:3000 -v "folder/volume-exemplo:/var/www" -w "/var/www" node npm start
+ Olhe aqui:
+https://cursos.alura.com.br/forum/topico-error-response-from-daemon-invalid-mode-var-www-77058
+
+pasta lab criada no virtual box como permanente e montar automaticamente;
+comando final executado:
+docker run -p 8080:3000 -v "//lab/volume-exemplo:/var/www" -w "/var/www" node npm start
