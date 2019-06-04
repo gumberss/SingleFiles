@@ -54,8 +54,25 @@ docker run -w "/var/www" containerName npm start -> -w = "working directory" -> 
 
 docker-machine restart -> reinicia a maquina virtual docker
 
+________________________________________________________________________________
 
+Docker files:
 
+docker build -f node.dockerfile -> -f especifica o nome do arquivo DockerFile
+
+docker build -t gustavo/node -> cria uma tag (nome) da sua imagem
+
+docker build . -> . é o contexto (pasta) em que voce quer buscar os dados do Dockerfile
+
+full command: docker build -f node.dockerfile -t gustavo/node .
+
+________________________________________________________________________________
+
+Docker Hub
+
+docker push gumberss/node -> sobe a imagem para o docker hub
+
+docker pull gumberss/node -> baixa a imagem do docker hub
 ________________________________________________________________________________
 Caso ocorra o erro:
 Error response from daemon: invalid mode: /var/www
