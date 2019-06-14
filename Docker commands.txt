@@ -54,6 +54,14 @@ docker run -w "/var/www" containerName npm start -> -w = "working directory" -> 
 
 docker-machine restart -> reinicia a maquina virtual docker
 
+docker network create --driver bridge minha-rede -> cria uma rede
+
+docker run -it --name meu-container-de-ubuntu --network minha-rede ubuntu -> Vincula a rede criada a um container
+
+docker network ls -> lista as redes
+
+docker network inspect minha-rede -> ve as informações da rede
+
 ________________________________________________________________________________
 
 Docker files:
