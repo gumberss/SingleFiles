@@ -2,7 +2,7 @@ Docker ps -> lista os containers ativos
 
 Docker ps -a -> lista todos os containers 
 
-docker rum -it hello_world -> atrela o terminal atual ao terminal do container
+docker run -it hello_world -> atrela o terminal atual ao terminal do container
 
 ctrl + c -> encerra container
 
