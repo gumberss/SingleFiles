@@ -30,7 +30,7 @@ docker -d -P run containerName -> -P vai fazer o docker atribuir portas
 
 docker -d -p 12345:80 run containerName -> -p me permite escolher a porta que estou atribuindo ao container
 
-docker -e AUTHOR="Gustavo M. S."run containerName -> -e permite adicionar variaveis de ambiente
+docker -e AUTHOR="Gustavo" run containerName -> -e permite adicionar variaveis de ambiente
 
 docker port @id -> mostra o mapeamento das portas do container com a marquina real
 
