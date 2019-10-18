@@ -70,7 +70,7 @@ docker build -f node.dockerfile -> -f especifica o nome do arquivo DockerFile
 
 docker build -t gustavo/node -> cria uma tag (nome) da sua imagem
 
-docker build . -> . é o contexto (pasta) em que voce quer buscar os dados do Dockerfile
+docker build . -> . é o contexto (pasta) em que você quer buscar os dados do Dockerfile
 
 full command: docker build -f node.dockerfile -t gustavo/node .
 
