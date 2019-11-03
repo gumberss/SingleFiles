@@ -63,3 +63,6 @@ services:      -> Definição dos serviços
 networks: 						-> rede criada
     production-network:			-> nome da rede
         driver: bridge			-> tipo da rede
+    default:                    -> Padrão
+        external:               -> externa
+            name: 'nome'
