@@ -6,6 +6,7 @@ services:      -> Definição dos serviços
             context: . 								 -> qual contexto usar para chegar até o arquivo
         image: douglasq/nginx						 -> a partir de qual imagem
         container_name: nginx						 -> nome do container
+        restart: always                              -> Sempre reinicia o servidor caso de ujm problema e ele cair
         ports:										 -> mapeamento de portas
             - "80:80"								 -> portas mapeadas
         networks: 									 -> network do container
